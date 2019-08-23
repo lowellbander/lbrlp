@@ -1,6 +1,7 @@
 // @flow
 
-import type {Tier, Volume} from './types.js'
+import type {Volume} from './types.js'
+import type {Tier} from './tiers.js'
 
 export type Phase = {[Tier]: Volume};
 
@@ -27,8 +28,6 @@ const phase1: Phase = {
    }
 };
 
-function getPhases(): $ReadOnlyArray<Phase> {
+export function getPhases(): $ReadOnlyArray<Phase> {
     return [phase1, phase1, phase1, phase1];
 }
-
-module.exports = {getPhases};

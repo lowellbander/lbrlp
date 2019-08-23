@@ -5,5 +5,5 @@ const {PhaseCard} = require('./PhaseCard.js');
 
 export function Program(): React$Node {
     const phases = getPhases();
-    return phases.map((p, i) => <PhaseCard phase={p} key={i}/>);
+    return phases.map((p, i) => <PhaseCard phase={p} name={`Phase ${i + 1}`} key={i}/>);
 }
