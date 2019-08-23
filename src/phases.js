@@ -2,7 +2,7 @@
 
 import type {Tier, Volume} from './types.js'
 
-type Phase = {[Tier]: Volume};
+export type Phase = {[Tier]: Volume};
 
 const phase1: Phase = {
    'Tier 1': {
