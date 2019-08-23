@@ -3,7 +3,7 @@
 import React from 'react';
 import type {Lift, Volume} from './types.js'
 const {getOneRepMax} = require('./oneRepMaxes.js');
-const {getExerciseVolume} = require('./TotalVolume.js');
+const {getExerciseVolume, numberWithCommas} = require('./TotalVolume.js');
 
 export function Exercise({lift, volume}: {lift: Lift, volume: Volume}): React$Node {
     return (
@@ -12,7 +12,7 @@ export function Exercise({lift, volume}: {lift: Lift, volume: Volume}): React$No
             {' '}
             ({formatPercent(volume.intensity)} * {getOneRepMax(lift)} lbs = {Math.round(volume.intensity * getOneRepMax(lift))} lbs)
             {' '}
-            Volume = {getExerciseVolume(lift, volume)} lbs
+            Volume = {numberWithCommas(getExerciseVolume(lift, volume))} lbs
         </p>)
     ;
 }
