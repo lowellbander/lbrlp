@@ -1,10 +1,9 @@
+// @flow
 import React from 'react';
-import Program from './Program.js';
+const {Program} = require('./Program.js');
 
-function App() {
+export function App() {
   return (
-        <Program />
+    <Program />
   );
 }
-
-export default App;
