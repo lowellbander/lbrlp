@@ -50,12 +50,12 @@ const phase3: Phase = {
    'Tier 1': {
         sets: 3,
         reps: 12,
-        intensity: 0.85,
+        intensity: 0.7,
    },
    'Tier 2': {
         sets: 5,
         reps: 15,
-        intensity: 0.8,
+        intensity: 0.65,
    },
    ...constantTiers,
 };
